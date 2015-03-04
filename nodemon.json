@@ -1,0 +1,10 @@
+{
+	"ignore": ["app/client/*.js", "app/public/*","app/server/tpls/*"],
+	"execMap": {
+		"js": "node --harmony"
+	},
+	"watch": [
+		"app/shared/",
+		"app/server/"
+	]
+}
