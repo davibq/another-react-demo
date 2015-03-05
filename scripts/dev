@@ -1,2 +1,2 @@
-webpack --watch &
+./node_modules/webpack/bin/webpack.js --watch &
 nodemon index.js

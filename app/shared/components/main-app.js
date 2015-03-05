@@ -6,7 +6,7 @@ var MainApplication = React.createClass({
 	render: function() {
 		return (
 		<div>
-			Render from React testing :)!
+			React Render MainApplication
 		</div>
 		);
 	}
