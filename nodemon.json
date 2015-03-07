@@ -5,6 +5,9 @@
 	},
 	"watch": [
 		"app/shared/",
-		"app/server/"
-	]
+		"app/server/*"
+	],
+	"events": {
+		"restart": "./node_modules/webpack/bin/webpack.js"
+	}
 }

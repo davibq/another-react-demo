@@ -2,9 +2,24 @@
 <html>
 <head>
 	<title>React Demo App</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 </head>
 <body>
-	<div id="main"><%- reactOutput %></div>
+	<header>
+		<span class="glyphicon glyphicon-th-list"></span>Links Listing
+	</header>
+
+	<main id="main"><%- reactOutput %></main>
+	<script>
+		<%- jsObjs -%>
+	</script>
+
+	<footer>
+		<p>React Demo - SSR</p>
+		<p>David Ballesteros - davibq@gmail.com</p>
+	</footer>
+
 	<script src="js/main.js"></script>
 </body>
 </html>

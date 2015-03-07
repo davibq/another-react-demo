@@ -1,7 +1,7 @@
 
 module.exports = {
     entry: {
-        main: "./app/client/main"
+        main: "./app/client/js/main"
     },
     output: {
         path: './app/public/js/',

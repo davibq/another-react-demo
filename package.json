@@ -23,6 +23,7 @@
   "homepage": "https://github.com/davibq/another-react-demo",
   "dependencies": {
     "babel": "^4.4.6",
+    "bootstrap": "^3.3.2",
     "browserify": "^9.0.3",
     "express": "^4.12.0",
     "jsx-loader": "^0.12.2",
