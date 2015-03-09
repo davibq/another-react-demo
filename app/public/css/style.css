@@ -89,3 +89,11 @@ header .glyphicon {
 	padding: 20px;
 }
 
+.table th {
+	font-weight: bolder;
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+}

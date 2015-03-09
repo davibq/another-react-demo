@@ -2,20 +2,39 @@
 var React = require('react');
 
 var SingleLink = React.createClass({
-  render: function() {
-    return <div><a href={this.props.data.url}>{this.props.data.description}</a> ({this.props.data.visits})</div>;
-  }
+
+	handleLinkClick (index) {
+		this.props.handleLinkClick(index);
+	},
+
+	render () {
+		var clickHandler = this.handleLinkClick.bind(this, this.props.index);
+		return (
+			<tr>
+				<td><span className="link" onClick={clickHandler}>{this.props.data.description}</span></td>
+				<td>{this.props.data.visits}</td>
+			</tr>
+		);
+	}
 });
 
 var linksGrid = React.createClass({
 
 	render () {
 		return (
-			<div>
-				{ this.props.links.map((link) => {
-					return <SingleLink key={link.objectId} data={link} />
+			<table className="table table-striped">
+				<thead>
+				<tr>
+					<th>Description</th>
+					<th>Visits</th>
+				</tr>
+				</thead>
+				<tbody>
+				{ this.props.links.sort((item1, item2) => item2.visits - item1.visits).map((link, index) => {
+					return <SingleLink key={link.objectId} data={link} handleLinkClick={this.props.handleLinkClick} index={index} />
 				}) }
-			</div>
+				</tbody>
+			</table>
 		)
 	}
 });
