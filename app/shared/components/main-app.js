@@ -15,10 +15,12 @@ module.exports = React.createClass({
 
 	componentWillMount () {
 		if (!isFrontend) {
+			console.log('From BE');
 			this.setState({
 				links: this.props.data.results
 			});
 		} else {
+			console.log('From FE');
 			this.setState({
 				links: window.obj
 			});
@@ -26,7 +28,6 @@ module.exports = React.createClass({
 	},
 
 	handleLinkClick (arrayIndex) {
-
 		this.setState({
 			links: this.state.links.map((item, index) => {
 				if (arrayIndex === index) {
@@ -43,6 +44,7 @@ module.exports = React.createClass({
 		return (
 		<div className="container main-container">
 			<GridComponent handleLinkClick={this.handleLinkClick} links={this.state.links}/>
+
 		</div>
 		);
 	}
