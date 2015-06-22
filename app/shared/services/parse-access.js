@@ -2,7 +2,7 @@
 /* CONSTANTS */
 var BASE_URL = 'api.parse.com';
 
-var https = require('https'),  // Browserify already has a wrapper to use http in browsers
+var https = require('https'),  // Webpack has a wrapper to use http in browsers
 	baseOptions = {
 		host: BASE_URL,
 		path: '/1/classes/Links',

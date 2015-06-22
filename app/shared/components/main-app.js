@@ -14,15 +14,15 @@ module.exports = React.createClass({
 	},
 
 	componentWillMount () {
-		if (!isFrontend) {
-			console.log('From BE');
-			this.setState({
-				links: this.props.data.results
-			});
-		} else {
+		if (isFrontend) {
 			console.log('From FE');
 			this.setState({
 				links: window.obj
+			});
+		} else {
+			console.log('From BE');
+			this.setState({
+				links: this.props.data.results
 			});
 		}
 	},
@@ -44,7 +44,6 @@ module.exports = React.createClass({
 		return (
 		<div className="container main-container">
 			<GridComponent handleLinkClick={this.handleLinkClick} links={this.state.links}/>
-
 		</div>
 		);
 	}
